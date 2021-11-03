@@ -299,18 +299,18 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div>
         {!this.state.metamaskConnected ? (
           <ConnectToMetamask connectToMetamask={this.connectToMetamask} />
         ) : !this.state.contractDetected ? (
           <ContractNotDeployed />
-        ) : this.state.loading ? (
+        ) : false ? (
           <Loading />
         ) : (
           <>
             <HashRouter basename="/">
               <Navbar />
-              <Route
+              {/* <Route
                 path="/"
                 exact
                 render={() => (
@@ -331,9 +331,9 @@ class App extends Component {
                     setMintBtnTimer={this.setMintBtnTimer}
                   />
                 )}
-              />
+              /> */}
               <Route
-                path="/marketplace"
+                path="/"
                 render={() => (
                   <AllCryptoBoys
                     accountAddress={this.state.accountAddress}
@@ -345,7 +345,7 @@ class App extends Component {
                   />
                 )}
               />
-              <Route
+              {/* <Route
                 path="/my-tokens"
                 render={() => (
                   <MyCryptoBoys
@@ -362,7 +362,7 @@ class App extends Component {
                 render={() => (
                   <Queries cryptoBoysContract={this.state.cryptoBoysContract} />
                 )}
-              />
+              /> */}
             </HashRouter>
           </>
         )}

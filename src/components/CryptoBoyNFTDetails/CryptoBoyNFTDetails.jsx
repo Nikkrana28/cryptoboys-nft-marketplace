@@ -132,7 +132,7 @@ class CryptoBoyNFTDetails extends Component {
           {this.props.accountAddress !== this.props.cryptoboy.currentOwner ? (
             this.props.cryptoboy.forSale ? (
               <button
-                className="btn btn-outline-primary mt-3 w-50"
+                className="buy-for-btn"
                 value={this.props.cryptoboy.price}
                 style={{ fontSize: "0.8rem", letterSpacing: "0.14rem" }}
                 onClick={(e) =>
@@ -154,7 +154,7 @@ class CryptoBoyNFTDetails extends Component {
                 <button
                   disabled
                   style={{ fontSize: "0.8rem", letterSpacing: "0.14rem" }}
-                  className="btn btn-outline-primary mt-3 w-50"
+                  className="not-for-sale-btn"
                 >
                   Buy For{" "}
                   {window.web3.utils.fromWei(

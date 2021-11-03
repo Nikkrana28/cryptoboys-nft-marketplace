@@ -11,36 +11,36 @@ const AllCryptoBoys = ({
   toggleForSale,
   buyCryptoBoy,
 }) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (cryptoBoys.length !== 0) {
       if (cryptoBoys[0].metaData !== undefined) {
-        setLoading(loading);
+        setLoading(true);
       } else {
-        setLoading(false);
+        setLoading(true);
       }
     }
   }, [cryptoBoys]);
 
   return (
     <div>
-      <div className="card mt-1">
+      {/* <div className="card mt-1">
         <div className="card-body align-items-center d-flex justify-content-center">
           <h5>
             Total No. of CryptoBoy's Minted On The Platform :{" "}
             {totalTokensMinted}
           </h5>
         </div>
-      </div>
-      <div className="d-flex flex-wrap mb-2">
+      </div> */}
+      <div className="d-flex flex-wrap mb-2 parant-nft-boys">
         {cryptoBoys.map((cryptoboy) => {
           return (
             <div
               key={cryptoboy.tokenId.toNumber()}
-              className="w-50 p-4 mt-1 border"
+              className="nft-boys"
             >
-              {!loading ? (
+              {true ? (
                 <CryptoBoyNFTImage
                   colors={
                     cryptoboy.metaData !== undefined

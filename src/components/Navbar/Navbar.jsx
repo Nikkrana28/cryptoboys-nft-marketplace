@@ -1,15 +1,30 @@
 import React from "react";
-import icon from "./favicon-32x32.png";
-import { Link } from "react-router-dom";
+import icon from "./favicon.ico";
+import styled from "styled-components";
 
 const Navbar = () => {
+
+  const NavHomeButton = styled.button`
+  padding: 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  background-color: #2DC86F;
+  border: none;
+  font-size: 15px;
+  width: 100px;
+  text-decoration: none;
+  `
+  const navbar = {
+    backgroundColor: "white"
+  }
+
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-sm" style={navbar}>
       <div className="container">
-        <img src={icon} alt="" />
-        <Link to="/" className="navbar-brand ml-2">
+        <img src={icon} alt="" style={{width:"42px", height:"42px"}} />
+        {/* <Link to="/" className="navbar-brand ml-2">
           NFT's
-        </Link>
+        </Link> */}
         <button
           className="navbar-toggler"
           data-toggle="collapse"
@@ -22,7 +37,7 @@ const Navbar = () => {
             style={{ fontSize: "0.8rem", letterSpacing: "0.2rem" }}
             className="navbar-nav ml-auto"
           >
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/" className="nav-link">
                 Home
               </Link>
@@ -31,13 +46,14 @@ const Navbar = () => {
               <Link to="/mint" className="nav-link">
                 Mint NFT
               </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/marketplace" className="nav-link">
-                Marketplace
-              </Link>
-            </li>
-            <li className="nav-item">
+            </li> */}
+            {/* <li className="nav-item">
+              <NavLink to="https://fomobaby.app/" className="Home">
+                Home
+              </NavLink>
+            </li> */}
+            <NavHomeButton> <a href="https://fomobaby.app/">Home</a> </NavHomeButton>
+            {/* <li className="nav-item">
               <Link to="/my-tokens" className="nav-link">
                 My Tokens
               </Link>
@@ -46,7 +62,7 @@ const Navbar = () => {
               <Link to="/queries" className="nav-link">
                 Queries
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
