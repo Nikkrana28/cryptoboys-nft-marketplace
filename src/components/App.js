@@ -309,7 +309,7 @@ class App extends Component {
         ) : (
           <>
             <HashRouter basename="/">
-              <Navbar />
+              {/* <Navbar /> */}
               {/* <Route
                 path="/"
                 exact

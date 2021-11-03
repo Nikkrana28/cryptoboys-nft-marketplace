@@ -15,15 +15,22 @@ class CryptoBoyNFTDetails extends Component {
   render() {
     return (
       <div key={this.props.cryptoboy.tokenId.toNumber()} className="mt-4">
-        <p>
-          <span className="font-weight-bold">Token Id</span> :{" "}
+        <div className="container d-flex justify-content-center g-5">
+        <p className="mr-5">
+          <span className="font-weight-bold">Token Id</span>:
           {this.props.cryptoboy.tokenId.toNumber()}
         </p>
+        
         <p>
-          <span className="font-weight-bold">Name</span> :{" "}
-          {this.props.cryptoboy.tokenName}
+          <span className="font-weight-bold ">Base Price: $27000 </span>
+          {/* {this.props.cryptoboy.tokenName} */}
         </p>
+        </div>
         <p>
+          <span className="font-weight-bold">Latest Price: $2500 </span> 
+          {/* {this.props.cryptoboy.tokenName} */}
+        </p>
+        {/* <p>
           <span className="font-weight-bold">Minted By</span> :{" "}
           {this.props.cryptoboy.mintedBy.substr(0, 5) +
             "..." +
@@ -58,7 +65,7 @@ class CryptoBoyNFTDetails extends Component {
         <p>
           <span className="font-weight-bold">No. of Transfers</span> :{" "}
           {this.props.cryptoboy.numberOfTransfers.toNumber()}
-        </p>
+        </p> */}
         <div>
           {this.props.accountAddress === this.props.cryptoboy.currentOwner ? (
             <form

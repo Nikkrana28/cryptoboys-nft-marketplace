@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import CryptoBoyNFTImage from "../CryptoBoyNFTImage/CryptoBoyNFTImage";
 import CryptoBoyNFTDetails from "../CryptoBoyNFTDetails/CryptoBoyNFTDetails";
 import Loading from "../Loading/Loading";
+import image from './nftimage'
+import styled from "styled-components";
+import icon from "./favicon.ico";
 
 const AllCryptoBoys = ({
   cryptoBoys,
@@ -13,44 +16,62 @@ const AllCryptoBoys = ({
 }) => {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    if (cryptoBoys.length !== 0) {
-      if (cryptoBoys[0].metaData !== undefined) {
-        setLoading(true);
-      } else {
-        setLoading(true);
-      }
-    }
-  }, [cryptoBoys]);
-
+  const NavHomeButton = styled.button`
+  padding: 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  background-color: #2DC86F;
+  border: none;
+  font-size: 15px;
+  width: 100px;
+  text-decoration: none;
+  `
+  // useEffect(() => {
+  //   if (cryptoBoys.length !== 0) {
+  //     if (cryptoBoys[0].metaData !== undefined) {
+  //       setLoading(true);
+  //     } else {
+  //       setLoading(true);
+  //     }
+  //   }
+  // }, [cryptoBoys]);
+  
+ console.log("length",cryptoBoys.length)
   return (
     <div>
-      {/* <div className="card mt-1">
-        <div className="card-body align-items-center d-flex justify-content-center">
-          <h5>
-            Total No. of CryptoBoy's Minted On The Platform :{" "}
-            {totalTokensMinted}
-          </h5>
+      <div className="mb">
+        <div className="card-body align-items-center d-flex container flex-wrap justify-content-center">
+        {/* <img src={icon} alt="" style={{width:"42px", height:"42px"}} /> */}
+          <h1 className="flex-grow-1">
+            {/* Total No. of CryptoBoy's Minted On The Platform :{" "}
+            {totalTokensMinted} */}
+            NFT Marketplace
+          </h1>
+          <div className="nft-marketplace-btn flex-wrap">
+          <button className="auction-btn">Auction</button>
+          <button className="market-btn">Market</button>
+          <button className="sellnft-btn">Sell NFT</button>
+          <NavHomeButton> <a href="https://fomobaby.app/">Home</a> </NavHomeButton>
+          </div>
         </div>
-      </div> */}
+      </div>
       <div className="d-flex flex-wrap mb-2 parant-nft-boys">
+        
         {cryptoBoys.map((cryptoboy) => {
           return (
             <div
-              key={cryptoboy.tokenId.toNumber()}
+              
               className="nft-boys"
             >
-              {true ? (
-                <CryptoBoyNFTImage
+              <img className="nftimages" src={image[cryptoBoys.indexOf(cryptoboy)]} alt="nftfomo"/>
+                {/* <CryptoBoyNFTImage
                   colors={
                     cryptoboy.metaData !== undefined
                       ? cryptoboy.metaData.metaData.colors
                       : ""
                   }
-                />
-              ) : (
-                <Loading />
-              )}
+                /> */}
+             
               <CryptoBoyNFTDetails
                 cryptoboy={cryptoboy}
                 accountAddress={accountAddress}

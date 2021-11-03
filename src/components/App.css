@@ -6,11 +6,11 @@ input[type="color"]:hover {
   cursor: pointer;
 }
 
-body {
+/* body {
   padding: 0;
   margin: 0;
 
-}
+} */
 
 
 .parant-nft-boys {
@@ -53,8 +53,6 @@ body {
   text-decoration: none;
   background-color: #2DC86F;
   border: none;
-  
-
 }
 
 .not-for-sale-btn {
@@ -64,4 +62,50 @@ body {
   text-decoration: none;
   background-color: #bfc0bf;
   border: none;
+}
+
+.auction-btn {
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  width: 100px;
+  text-decoration: none;
+  background-color: #2DC86F;
+  border: none;
+}
+
+.market-btn {
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  width: 100px;
+  text-decoration: none;
+  background-color: #2DC86F;
+  border: none;
+}
+
+.sellnft-btn {
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  width: 100px;
+  text-decoration: none;
+  background-color: #2DC86F;
+  border: none;
+
+}
+
+.nft-marketplace-btn {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+.nftimages {
+  width: 300px;
+  height: 300px;
+  border: 30px solid rgb(250, 217, 110);
+  box-shadow: 2px 7px 10px rgb(178, 180, 177);
+  border-radius: 10px;
 }

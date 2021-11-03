@@ -19,19 +19,19 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="navbar navbar-expand-sm" style={navbar}>
+    <div className="navbar navbar-expand-sm" style={navbar}>
       <div className="container">
         <img src={icon} alt="" style={{width:"42px", height:"42px"}} />
         {/* <Link to="/" className="navbar-brand ml-2">
           NFT's
         </Link> */}
-        <button
+        {/* <button
           className="navbar-toggler"
           data-toggle="collapse"
           data-target="#navbarNav"
         >
           <span className="navbar-toggler-icon"></span>
-        </button>
+        </button> */}
         <div id="navbarNav" className="collapse navbar-collapse">
           <ul
             style={{ fontSize: "0.8rem", letterSpacing: "0.2rem" }}
@@ -66,7 +66,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
 
