@@ -22,12 +22,12 @@ class CryptoBoyNFTDetails extends Component {
         </p>
         
         <p>
-          <span className="font-weight-bold ">Base Price: $27000 </span>
+          <span className="font-weight-bold ">Base Price: $100 </span>
           {/* {this.props.cryptoboy.tokenName} */}
         </p>
         </div>
         <p>
-          <span className="font-weight-bold">Latest Price: $2500 </span> 
+          <span className="font-weight-bold">Latest Price: $250 </span> 
           {/* {this.props.cryptoboy.tokenName} */}
         </p>
         {/* <p>
@@ -139,9 +139,9 @@ class CryptoBoyNFTDetails extends Component {
           {this.props.accountAddress !== this.props.cryptoboy.currentOwner ? (
             this.props.cryptoboy.forSale ? (
               <button
-                className="buy-for-btn"
+                className="buy-btn"
                 value={this.props.cryptoboy.price}
-                style={{ fontSize: "0.8rem", letterSpacing: "0.14rem" }}
+               
                 onClick={(e) =>
                   this.props.buyCryptoBoy(
                     this.props.cryptoboy.tokenId.toNumber(),
@@ -149,28 +149,28 @@ class CryptoBoyNFTDetails extends Component {
                   )
                 }
               >
-                Buy For{" "}
-                {window.web3.utils.fromWei(
+                Buy 
+                {/* {window.web3.utils.fromWei(
                   this.props.cryptoboy.price.toString(),
                   "Ether"
-                )}{" "}
-                Ξ
+                )}{" "} */}
+                
               </button>
             ) : (
               <>
                 <button
-                  disabled
-                  style={{ fontSize: "0.8rem", letterSpacing: "0.14rem" }}
-                  className="not-for-sale-btn"
+                 
+                  
+                  className=" buy-btn"
                 >
-                  Buy For{" "}
-                  {window.web3.utils.fromWei(
+                  Buy 
+                  {/* {window.web3.utils.fromWei(
                     this.props.cryptoboy.price.toString(),
                     "Ether"
-                  )}{" "}
-                  Ξ
+                  )}{" "} */}
+                  
                 </button>
-                <p className="mt-2">Currently not for sale!</p>
+                {/* <p className="mt-2">Currently not for sale!</p> */}
               </>
             )
           ) : null}

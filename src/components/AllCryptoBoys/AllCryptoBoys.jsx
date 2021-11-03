@@ -20,11 +20,11 @@ const AllCryptoBoys = ({
   padding: 10px;
   border-radius: 20px;
   text-decoration: none;
-  background-color: #2DC86F;
+  background-color: #2d6145;
   border: none;
   font-size: 15px;
   width: 100px;
-  text-decoration: none;
+  color: white;
   `
   // useEffect(() => {
   //   if (cryptoBoys.length !== 0) {
@@ -39,30 +39,24 @@ const AllCryptoBoys = ({
  console.log("length",cryptoBoys.length)
   return (
     <div>
-      <div className="mb">
+      <div className="nav-bar">
         <div className="card-body align-items-center d-flex container flex-wrap justify-content-center">
-        {/* <img src={icon} alt="" style={{width:"42px", height:"42px"}} /> */}
           <h1 className="flex-grow-1">
-            {/* Total No. of CryptoBoy's Minted On The Platform :{" "}
-            {totalTokensMinted} */}
             NFT Marketplace
           </h1>
           <div className="nft-marketplace-btn flex-wrap">
           <button className="auction-btn">Auction</button>
           <button className="market-btn">Market</button>
           <button className="sellnft-btn">Sell NFT</button>
-          <NavHomeButton> <a href="https://fomobaby.app/">Home</a> </NavHomeButton>
+          <NavHomeButton> <a href="https://fomobaby.app/" style={{color:"white"}}>Home</a> </NavHomeButton>
           </div>
         </div>
       </div>
-      <div className="d-flex flex-wrap mb-2 parant-nft-boys">
-        
+
+      <div className="d-flex flex-wrap mb-2 parant-nft-boys" style={{backgroundColor:"violet"}}>
         {cryptoBoys.map((cryptoboy) => {
           return (
-            <div
-              
-              className="nft-boys"
-            >
+            <div className="nft-boys">
               <img className="nftimages" src={image[cryptoBoys.indexOf(cryptoboy)]} alt="nftfomo"/>
                 {/* <CryptoBoyNFTImage
                   colors={

@@ -332,9 +332,11 @@ class App extends Component {
                   />
                 )}
               /> */}
+              
               <Route
                 path="/"
                 render={() => (
+                  
                   <AllCryptoBoys
                     accountAddress={this.state.accountAddress}
                     cryptoBoys={this.state.cryptoBoys}
